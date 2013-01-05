@@ -1,0 +1,33 @@
+doctype 5
+html
+  head
+    title= title
+    meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
+    meta(content="kodeaffe code monkey", name="keywords")
+    meta(content="a website to show off the kodeaffe", name="description")
+    meta(content="http://vim.org", name="generator")
+    link(rel="stylesheet", href="/css/style.css")
+    block extrahead
+  body
+    #header
+      #logo
+        a(href="#{ url('index') }", title="Home")
+          img(src="/img/logo.png", width=120, height=90)
+      #site
+        a(href="#{ url('index') }", title="Home")
+          h1 kodeaffe.de
+        a(href="#{ url('index') }", title="Home")
+          h4
+            | ///freier kode für freie affen
+      div.clear
+
+      ul(id="menu")
+        li.first
+          a(href="#{ url('index') }", title="home") home
+        li
+          a(href="#{ url('portfolio') }", title="portfolio") portfolio
+        li.last
+          a(href="#{ url('spacebears') }", title="spacebears") spacebears
+
+    #content
+      block content

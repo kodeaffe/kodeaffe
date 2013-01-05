@@ -1,0 +1,51 @@
+/* CSS for spacebears game */
+
+canvas {
+  float:left;
+  background:url(/spacebears/img/background.jpg);
+  border: 0;
+  padding: 0;
+  margin-right: 5px;
+}
+
+label {
+  display: block;
+  float: left;
+  width: 100px;
+}
+
+
+#gamezone {
+  width: 900px;
+  height: 413px;
+  border: 0;
+  padding: 0;
+  margin: 2px;
+}
+
+#panel {
+  text-align: left;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#intro, #scoreboard, #actions, #settings {
+  margin: 10px 0;
+}
+
+
+#intro #fastest {
+  font-size: larger;
+  color: #33f;
+}
+
+#scoreboard #score {
+  font-size: larger;
+  color: #0d0;
+}
+
+#scoreboard #miss {
+  font-size: larger;
+  color: #d00;
+}

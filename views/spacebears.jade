@@ -1,0 +1,53 @@
+extends layout
+
+block extrahead
+    link(rel="canonical", href="/spacebears")
+    link(rel="stylesheet", href="/spacebears/style.css")
+    script(src="/spacebears/script.js")
+
+
+block content
+  h2 Spacebears
+
+  #gamezone
+    // _must_ specify width + height in canvas tag to have bears in right size
+    canvas(id="board", width="550px", height="413px")
+    #panel
+      h3 Catch the Space Bears!
+      h4 A demo to showcase HTML5
+
+      #intro
+        | Grab a bear to hear an awesome sound! Every miss will give you a one-point penalty.
+        br
+        | Fastest game: 
+        span(id="fastest") 0
+        | s
+
+      #scoreboard
+        h4 Scoreboard
+        label Miss:
+        span(id="miss") 0
+        br
+        label Score: 
+        span(id="score") 0
+        br
+        label Time: 
+        span(id="elapsed") 0
+        | s
+
+      #actions
+        h4 Actions
+        button(id="startpause") Start
+        button(id="reset") Reset
+
+      #settings
+        h4() Settings
+        form
+          label Win Score 
+          input(id="settings-winscore", type="range", min="1", max="99", value="10")
+          br
+          label Speed 
+          input(id="settings-speed", type="range", min="1", max="9", value="1")
+          br
+          label Bears 
+        input(id="settings-bears", type="range", min="1", max="15", value="4")

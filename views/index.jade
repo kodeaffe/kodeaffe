@@ -1,0 +1,52 @@
+extends layout
+
+
+block extrahead
+    link(rel="canonical", href="/")
+
+
+block content
+  #main
+    h2 Welcome to my humble abode on the interwebz
+
+    #contact.box
+      h4 You can contact me via:
+      ul
+        li mailto: webmaster at kodeaffe dot de
+        li xmpp: shensche at jabber dot ccc dot de
+        li status.net: 
+          a(href="http://identi.ca/shensche") identi.ca
+        li job websites: 
+          a(href="http://www.djangodevelopers.net/developer/sebastian-henschel/") djangodevelopers.net
+        li github: 
+          a(href="http://github.com/marmorkuchen") marmorkuchen
+        li Otherwise I'm bouncing around planet Earth, currently in Berlin. Give me a shout if you want to hook up somewhere around these parts.
+
+    #identica.box
+      script(src="/js/mootools/mootools-1.2.4-core-yc.js")
+      script(src="/js/mootools/mootools-1.2.4.4-more.js")
+      script(src="/js/IdenticaWidget.js")
+      script
+        <!--//--><![CDATA[// ><!--
+        window.addEvent('domready', function(){
+          new IdenticaWidget({
+            user_name: "shensche",
+            avatar: 0,
+            msg_count: 5,
+            container: $("identica-widget"),
+          });
+        });
+        //--><!]]>
+      #identica-widget
+
+  #sidebar-right
+    #links.box
+      h4 Interesting Links
+      ul
+        - for (var name in interestingLinks)
+          - var link = interestingLinks[name]
+            li
+              a(href="#{link.href}") #{name}
+              br
+              | #{link.description}
+  div.clear

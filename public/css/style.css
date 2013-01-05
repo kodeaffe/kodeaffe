@@ -1,0 +1,103 @@
+body {
+  font: 14px Verdana, sans-serif;
+  background-color: #0d0d74;
+  padding: 5px;
+  margin: 0;
+}
+
+a {
+  color: #787777;
+}
+a:hover {
+  color: #e8e7e7;
+}
+h1, h2, h3, h4, #follow-me-link {
+  color: #8c670e;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+div, p {
+  color: #b8b7b7;
+  padding: 0;
+}
+
+
+.clear {
+  clear: both;
+}
+
+#main {
+  float: left;
+  width: 75%;
+}
+#sidebar-right {
+  float: right;
+  width: 24%;
+  margin-left: 1%;
+}
+
+
+#header {
+  background-color: #242323;
+  padding: 10px;
+}
+#header a {
+  text-decoration: none;
+}
+#header #logo {
+  float: left;
+}
+#header #site {
+  float:left;
+  padding-left: 5px;
+}
+#header #menu {
+  margin: 0;
+  padding: 0;
+  padding-left: 0; /* some browsers need this */
+}
+#header #menu li {
+  display: inline;
+  list-style-type: none;
+  border-right: 1px solid;
+  padding: 0 3px;
+}
+#header #menu li.first {
+  padding: 0 3px 0 0;
+}
+
+#header #menu li.last {
+  border-right: none;
+}
+#header #menu li a {
+  color: #3f6d0b;
+}
+#header #menu li a:hover {
+  color: #6f9d1b;
+  text-decoration: underline;
+}
+
+
+#content {
+  background-color: #353131;
+  padding: 10px;
+}
+
+.box {
+  border: 1px solid #4d4b42;
+  background-color: #44423c;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+
+.box ul {
+  padding-left: 15px;
+}
+
+
+#links {
+  min-height: 400px;
+}
