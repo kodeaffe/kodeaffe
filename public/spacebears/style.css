@@ -26,7 +26,7 @@ label {
 #panel {
   text-align: left;
   border: 0;
-  padding: 0;
+  padding: 5px;
   margin: 0;
 }
 
@@ -37,7 +37,7 @@ label {
 
 #intro #fastest {
   font-size: larger;
-  color: #33f;
+  color: #11d;
 }
 
 #scoreboard #score {
@@ -47,5 +47,15 @@ label {
 
 #scoreboard #miss {
   font-size: larger;
-  color: #d00;
+  color: #f11;
+}
+
+#scoreboard #elapsed {
+  font-size: larger;
+  color: #dd0;
+}
+
+
+#actions button {
+  width: 100px;
 }

@@ -12,7 +12,7 @@ block content
   #gamezone
     // _must_ specify width + height in canvas tag to have bears in right size
     canvas(id="board", width="550px", height="413px")
-    #panel
+    #panel(class="box")
       h3 Catch the Space Bears!
       h4 A demo to showcase HTML5
 
@@ -21,7 +21,7 @@ block content
         br
         | Fastest game: 
         span(id="fastest") 0
-        | s
+        |  s
 
       #scoreboard
         h4 Scoreboard
@@ -31,9 +31,9 @@ block content
         label Score: 
         span(id="score") 0
         br
-        label Time: 
+        label Elapsed: 
         span(id="elapsed") 0
-        | s
+        |  s
 
       #actions
         h4 Actions
@@ -50,4 +50,4 @@ block content
           input(id="settings-speed", type="range", min="1", max="9", value="1")
           br
           label Bears 
-        input(id="settings-bears", type="range", min="1", max="15", value="4")
+        input(id="settings-bears", type="range", min="1", max="5", value="4")
