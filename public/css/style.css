@@ -1,25 +1,25 @@
 body {
   font: 14px Verdana, sans-serif;
-  background-color: #0d0d74;
+  background-color: #131;
   padding: 5px;
   margin: 0;
 }
 
 a {
-  color: #787777;
+  color: #999;
 }
 a:hover {
-  color: #e8e7e7;
+  color: #eee;
 }
 h1, h2, h3, h4, #follow-me-link {
-  color: #8c670e;
+  color: #860;
   padding: 0;
   margin: 0;
   font-weight: bold;
 }
 
 div, p {
-  color: #b8b7b7;
+  color: #ccc;
   padding: 0;
 }
 
@@ -40,7 +40,7 @@ div, p {
 
 
 #header {
-  background-color: #242323;
+  background-color: #222;
   padding: 10px;
 }
 #header a {
@@ -72,22 +72,23 @@ div, p {
   border-right: none;
 }
 #header #menu li a {
-  color: #3f6d0b;
+  font-size: larger;
+  color: #360;
 }
 #header #menu li a:hover {
-  color: #6f9d1b;
+  color: #691;
   text-decoration: underline;
 }
 
 
 #content {
-  background-color: #353131;
+  background-color: #333;
   padding: 10px;
 }
 
 .box {
-  border: 1px solid #4d4b42;
-  background-color: #44423c;
+  border: 1px solid #555a55;
+  background-color: #444a44;
   margin: 10px 0;
   padding: 5px;
 }
