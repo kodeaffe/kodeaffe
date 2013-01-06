@@ -9,6 +9,7 @@ var express = require('express')
   , urls = require('urls')
   , routes = require('./routes')
   , portfolio = require('./routes/portfolio')
+  , kartuliflash = require('./routes/kartuliflash')
   , spacebears = require('./routes/spacebears');
 
 var app = express();
@@ -38,7 +39,8 @@ app.configure('production', function(){
 urls([
   { pattern: '/', view: routes.index, name: 'index' },
   { pattern: '/portfolio', view: portfolio.index, name: 'portfolio' },
-  { pattern: '/spacebears', view: spacebears.index, name: 'spacebears' }
+  { pattern: '/spacebears', view: spacebears.index, name: 'spacebears' },
+  { pattern: '/kartuliflash', view: kartuliflash.index, name: 'kartuliflash' }
 ], app);
 
 http.createServer(app).listen(app.get('port'), function(){

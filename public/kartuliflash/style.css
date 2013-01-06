@@ -1,0 +1,58 @@
+/* stylesheet for kartuli flash */
+
+th, td {
+  text-align: left;
+  padding: 3px;
+}
+
+.correct {
+  color: #fff;
+  background: #1a1;
+}
+.wrong {
+  color: #fff;
+  background: #a11;
+}
+.box {
+  margin-bottom: 10px;
+}
+.georgian-table {
+  font-size: 130%;
+}
+
+#arena {
+  width: 350px;
+  float: left;
+  margin-right: 20px;
+}
+#sidebar {
+  float: left;
+  display: none;
+}
+
+#english {
+  margin-left: 10px;
+  padding: 3px;
+}
+#georgian {
+  font-size: 300%;
+}
+
+#scoreboard {
+  position: relative;
+  height: 25px;
+}
+#showtable {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+#new {
+  margin-top: 5px;
+}
+
+
+#letter-table caption {
+  font-size: x-large;
+}

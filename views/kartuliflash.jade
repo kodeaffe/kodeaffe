@@ -1,0 +1,32 @@
+extends layout
+
+block extrahead
+    link(rel="canonical", href="/kartuliflash")
+    link(rel="stylesheet", href="/kartuliflash/style.css")
+    script(src="/js/jquery-1.8.3.min.js")
+    script(src="/kartuliflash/script.js")
+
+
+block content
+  h2 Georgian Letter Flashcards
+
+  #arena
+    form
+      #flashcard.box
+        div Georgian: 
+          span(id="georgian")
+        div English: 
+          input(type="text", id="solution", size="3", maxlength="3")
+          button(id="check") Check
+          span(id="english")
+        button(id="new") New Card (Alt+n)
+
+      #scoreboard.box Score: 
+        span(id="score") 0 / 0
+        button(id="showtable") Show Table
+
+  #sidebar.box
+    table(id="letter-table")
+      caption Letter Table
+
+  br(style="clear:both")

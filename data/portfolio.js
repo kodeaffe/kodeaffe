@@ -49,7 +49,7 @@ exports.portfolio = [
     items: [
       {
         header: 'Kartuli Flash (2011-09)',
-        link_href: '/projects/kartuliflash/index.html',
+        link_href: '/kartuliflash',
         link_text: 'learn',
         description: 'A little application to learn georgian letters by flash cards (mediocre user interface).',
         technologies: 'HTML, CSS, JQuery',
