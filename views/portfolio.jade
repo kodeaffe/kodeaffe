@@ -1,4 +1,35 @@
 extends layout
 
+block extrahead
+    link(rel="canonical", href="/portfolio")
+    link(rel="stylesheet", href="/css/portfolio.css")
+
 block content
   h2 Portfolio
+
+  #intro.
+    If You are interested in hiring me or if You just want to see what I have been up to in the field of technology the last years, have a look here.
+    Also, I have finally decided to use github as project repository, check:
+  p
+    a(title="kodeaffe @ github",href="http://github.com/marmorkuchen") http://github.com/marmorkuchen
+    .
+
+  #portfolio
+    - for (var i in portfolio)
+      h3!= portfolio[i].year
+      - for (var j in portfolio[i].items)
+        - var item = portfolio[i].items[j]
+        table.box
+          tr
+            td(colspan="2")
+              h4!= item['header']
+          tr
+            td.label
+              a(href="#{item['link_href']}") #{item['link_text']}
+            td!= item['description']
+          tr
+            td.label technologies
+            td!= item['technologies']
+          tr
+            td.label status
+            td!= item['status']

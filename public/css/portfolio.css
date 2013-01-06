@@ -1,0 +1,20 @@
+#portfolio table {
+  margin-bottom:20px;
+  width: 100%;
+}
+
+#portfolio tr {
+  vertical-align:top;
+}
+#portfolio td.label {
+  width: 150px;
+}
+
+#portfolio caption {
+  text-align:left;
+  font-size:x-large;
+}
+
+#portfolio h3, #portfolio h4 {
+  color: #b8b7b7;
+}
