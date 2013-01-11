@@ -6,41 +6,51 @@ block extrahead
     script(src="/js/portfolio.js")
 
 block content
-  h2 Portfolio
+  #main
+    h2 Portfolio
 
-  #intro.
-    Have a look at my IT-related doings here. Currently, I am not available for hire, so please check back later. Also, I have finally decided to use github as my main project repository, check:
-  p
-    a(title="kodeaffe @ github",href="http://github.com/marmorkuchen") http://github.com/marmorkuchen
+    #intro.
+      Have a look at my IT-related doings here. Currently, I am not available for hire, so please check back later. Also, I have finally decided to use github as my main project repository, check:
+    p
+      a(title="kodeaffe @ github",href="http://github.com/marmorkuchen") http://github.com/marmorkuchen
 
-  #portfolio
-    - for (var i in portfolio)
-      div(id="year-#{portfolio[i].year}")
-        h3
-          a.toggle= portfolio[i].year
-            span.arrow &rarr;
-        - for item in portfolio[i].items
-          table.box
-            tr
-              td(colspan="2")
-                - var header = item['header']
-                - if ('start' in item && 'end' in item)
-                  - header += ' (' + item['start'] + ' - ' + item['end'] + ')'
-                - else if ('start' in item)
-                  - header += ' (' + item['start'] + ')'
-                - else if ('end' in item)
-                  - header += ' (- ' + item['end'] + ')'
-                h4= header
+    #portfolio
+      - for (var i in portfolio)
+        div(id="year-#{portfolio[i].year}")
+          h3
+            a.toggle= portfolio[i].year
+              span.arrow &rarr;
+          - for item in portfolio[i].items
+            table.box
+              tr
+                td(colspan="2")
+                  - var header = item['header']
+                  - if ('start' in item && 'end' in item)
+                    - header += ' (' + item['start'] + ' - ' + item['end'] + ')'
+                  - else if ('start' in item)
+                    - header += ' (' + item['start'] + ')'
+                  - else if ('end' in item)
+                    - header += ' (- ' + item['end'] + ')'
+                  h4= header
 
-            tr
-              td.label
-                a(href="#{item['link_href']}") #{item['link_text']}
-              td!= item['description']
+              tr
+                td.label
+                  a(href="#{item['link_href']}") #{item['link_text']}
+                td!= item['description']
 
-            tr
-              td.label technologies
-              td= item['technologies'].join(', ')
+              tr
+                td.label technologies
+                td= item['technologies'].join(', ')
 
-            tr
-              td.label status
-              td= item['status']
+              tr
+                td.label status
+                td= item['status']
+
+  #sidebar-right
+    #technologies.box
+      h2 Technologies
+      ul
+      - for (var i in technologies)
+        li(id="#{technologies[i]}") #{technologies[i]}
+
+  div.clear
