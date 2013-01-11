@@ -17,7 +17,7 @@ block content
       h3!= portfolio[i].year
       - for (var j in portfolio[i].items)
         - var item = portfolio[i].items[j]
-        table.box
+        table.box(id="#{item['header']}")
           tr
             td(colspan="2")
               - var header = item['header']
@@ -27,14 +27,17 @@ block content
                 - header += ' (' + item['start'] + ')'
               - else if ('end' in item)
                 - header += ' (- ' + item['end'] + ')'
-              h4 #{header}
+              h4= header
+
           tr
             td.label
               a(href="#{item['link_href']}") #{item['link_text']}
             td!= item['description']
+
           tr
             td.label technologies
-            td!= item['technologies']
+            td= item['technologies'].join(', ')
+
           tr
             td.label status
-            td!= item['status']
+            td= item['status']
