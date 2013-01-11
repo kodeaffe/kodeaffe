@@ -1,3 +1,5 @@
+/* CSS for portfolio */
+
 #portfolio table {
   margin-bottom:20px;
   width: 100%;
@@ -17,4 +19,12 @@
 
 #portfolio h3, #portfolio h4 {
   color: #b8b7b7;
+}
+
+
+#portfolio .toggle {
+  cursor: pointer;
+}
+#portfolio .toggle .arrow {
+  font-size: smaller;
 }

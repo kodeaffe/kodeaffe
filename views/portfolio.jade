@@ -3,6 +3,7 @@ extends layout
 block extrahead
     link(rel="canonical", href="/portfolio")
     link(rel="stylesheet", href="/css/portfolio.css")
+    script(src="/js/portfolio.js")
 
 block content
   h2 Portfolio
@@ -14,30 +15,32 @@ block content
 
   #portfolio
     - for (var i in portfolio)
-      h3!= portfolio[i].year
-      - for (var j in portfolio[i].items)
-        - var item = portfolio[i].items[j]
-        table.box(id="#{item['header']}")
-          tr
-            td(colspan="2")
-              - var header = item['header']
-              - if ('start' in item && 'end' in item)
-                - header += ' (' + item['start'] + ' - ' + item['end'] + ')'
-              - else if ('start' in item)
-                - header += ' (' + item['start'] + ')'
-              - else if ('end' in item)
-                - header += ' (- ' + item['end'] + ')'
-              h4= header
+      div(id="year-#{portfolio[i].year}")
+        h3
+          a.toggle= portfolio[i].year
+            span.arrow &rarr;
+        - for item in portfolio[i].items
+          table.box
+            tr
+              td(colspan="2")
+                - var header = item['header']
+                - if ('start' in item && 'end' in item)
+                  - header += ' (' + item['start'] + ' - ' + item['end'] + ')'
+                - else if ('start' in item)
+                  - header += ' (' + item['start'] + ')'
+                - else if ('end' in item)
+                  - header += ' (- ' + item['end'] + ')'
+                h4= header
 
-          tr
-            td.label
-              a(href="#{item['link_href']}") #{item['link_text']}
-            td!= item['description']
+            tr
+              td.label
+                a(href="#{item['link_href']}") #{item['link_text']}
+              td!= item['description']
 
-          tr
-            td.label technologies
-            td= item['technologies'].join(', ')
+            tr
+              td.label technologies
+              td= item['technologies'].join(', ')
 
-          tr
-            td.label status
-            td= item['status']
+            tr
+              td.label status
+              td= item['status']
