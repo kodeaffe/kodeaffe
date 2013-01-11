@@ -24,6 +24,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.directory(__dirname + '/public'));
 });
 
 app.configure('development', function(){
