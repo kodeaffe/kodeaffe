@@ -23,20 +23,18 @@ block content
         li Otherwise I'm bouncing around planet Earth, currently in Berlin. Give me a shout if you want to hook up somewhere around these parts.
 
     #identica.box
-      script(src="/js/mootools/mootools-1.2.4-core-yc.js")
-      script(src="/js/mootools/mootools-1.2.4.4-more.js")
-      script(src="/js/IdenticaWidget.js")
+      h4 kodeaffe @ identi.ca
+      script(src="/js/jquery.livetwitter.min.js")
       script
-        <!--//--><![CDATA[// ><!--
-        window.addEvent('domready', function(){
-          new IdenticaWidget({
-            user_name: "shensche",
-            avatar: 0,
-            msg_count: 5,
-            container: $("identica-widget"),
+        $(function() {
+          $("#identica-widget").liveTwitter('shensche', {
+            limit: 5,
+            service: 'identi.ca',
+            mode: 'user_timeline',
+            refresh: false,
+            showAuthor: false
           });
         });
-        //--><!]]>
       #identica-widget
 
   #sidebar-right
