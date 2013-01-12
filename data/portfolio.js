@@ -18,7 +18,7 @@ exports.portfolio = [
         link_href: 'http://kodeaffe.de',
         link_text: 'website',
         description: 'Implemented kodeaffe.de using a homebrew system based on <a href="http://expressjs.com/">express.js</a>',
-        technologies: ['Express.js', 'Javascript', 'HTML', 'CSS', 'Jade'],
+        technologies: ['Express.js', 'JQuery', 'HTML', 'CSS', 'Jade'],
         status: 'online'
       }
     ]
