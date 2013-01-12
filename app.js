@@ -15,6 +15,7 @@ var express = require('express')
 var app = express();
 
 app.configure(function(){
+  app.set('host', 'localhost');
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
@@ -44,6 +45,11 @@ urls([
   { pattern: '/kartuliflash', view: kartuliflash.index, name: 'kartuliflash' }
 ], app);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
-});
+http.createServer(app).listen(
+  app.get('port'),
+  app.get('host'),
+  function() {
+    console.log("Express server listening on " + app.get('host') +
+      ':' + app.get('port'));
+  }
+);
