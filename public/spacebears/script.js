@@ -39,7 +39,7 @@ var Spacebears = {
     this.setMiss = function(value) {
       /* set miss value and ui */
       this.miss = value;
-      document.getElementById('miss').innerHTML = value;
+      $('#miss').html(value);
     };
     this.addMiss = function(value) {
       /* add value to miss */
@@ -50,7 +50,7 @@ var Spacebears = {
     this.setScore = function(value) {
       /* set score value and ui */
       this.score = value;
-      document.getElementById('score').innerHTML = value;
+      $('#score').html(value);
     };
     this.addScore = function(value) {
       /* add value to score */
@@ -65,8 +65,7 @@ var Spacebears = {
     this.setElapsed = function(value) {
       /* set elapsed time */
       this.elapsed = value;
-      var elapsed = document.getElementById('elapsed');
-      elapsed.innerHTML = Math.floor(this.elapsed / 1000);
+      $('#elapsed').html(Math.floor(this.elapsed / 1000));
     };
     this.tick = function() {
       /* tick-tock the clock */
@@ -80,13 +79,13 @@ var Spacebears = {
 
     /* canvas */
     this.sprites = undefined;
-    this.canvas = document.getElementById('board');
-    this.ctx = this.canvas.getContext('2d');
+    this.canvas = $('#board');
+    this.ctx = this.canvas[0].getContext('2d');
     this.ctx.globalCompositeOperation = 'destination-over';
 
     this.clearCanvas = function() {
       /* clear the game board */
-      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      this.ctx.clearRect(0, 0, this.canvas.width(), this.canvas.height());
     };
 
     this.draw = function() {
@@ -94,8 +93,8 @@ var Spacebears = {
       this.clearCanvas();
       for (i = 0; i < this.sprites.length; i++) {
         var sprite = this.sprites[i];
-        sprite.pos.x = Spacebears.random(this.canvas.width, sprite.img.width);
-        sprite.pos.y = Spacebears.random(this.canvas.height, sprite.img.height);
+        sprite.pos.x = Spacebears.random(this.canvas.width(), sprite.img.width);
+        sprite.pos.y = Spacebears.random(this.canvas.height(), sprite.img.height);
         this.ctx.drawImage(sprite.img, sprite.pos.x, sprite.pos.y);
       }
       this.tick();
@@ -106,12 +105,12 @@ var Spacebears = {
     this.paused = true;
     this.startpause = function() {
       /* handle when user clicks on start/pause button */
-      button = document.getElementById('startpause');
+      button = $('#startpause');
       if (this.paused) {
-        button.innerHTML = 'Pause';
+        button.html('Pause');
         this.start();
       } else {
-        button.innerHTML = 'Continue';
+        button.html('Continue');
         this.pause();
       }
     };
@@ -136,8 +135,7 @@ var Spacebears = {
       this.setScore(0);
       this.setElapsed(0);
 
-      var startpause = document.getElementById('startpause');
-      startpause.innerHTML = 'Start';
+      $('#startpause').html('Start');
     };
 
 
@@ -145,21 +143,18 @@ var Spacebears = {
     this.winscore = 10;
     this.setWinScore = function() {
       /* set the winning score */
-      var winscore = document.getElementById('settings-winscore');
-      this.winscore = winscore.value;
+      this.winscore = $('#settings-winscore').val();
     };
 
     this.setSpeed = function() {
       /* set movement speed of the bears */
-      var speed = document.getElementById('settings-speed');
-      this.timeout = 1000 - ((speed.value - 1) * 100);
+      this.timeout = 1000 - (($('#settings-speed').val() - 1) * 100);
     };
 
     this.setBears = function() {
       /* set number of bears in game */
-      var bears = document.getElementById('settings-bears');
       var sprites = new Array();
-      for (i = 0; i < bears.value; i++) {
+      for (i = 0; i < $('#settings-bears').val(); i++) {
         sprites.push(new Spacebears.Sprite(i));
       }
       this.sprites = sprites;
@@ -177,8 +172,7 @@ var Spacebears = {
 
       if (this.elapsed < this.fastest || this.fastest == 0) {
         this.fastest = this.elapsed;
-        var fastest = Math.floor(this.fastest / 1000);
-        document.getElementById('fastest').innerHTML = fastest;
+        $('#fastest').html(Math.floor(this.fastest / 1000));
       }
       this.reset();
     };
@@ -225,30 +219,18 @@ var Spacebears = {
     this.run = function() {
       /* run the game */
       var game = this;
-      document.getElementById('settings-winscore').onchange = function(evt){
-        game.setWinScore();
-      }
+      $('#settings-winscore').change(function(evt){ game.setWinScore(); });
       game.setWinScore();
 
-      document.getElementById('settings-speed').onchange = function(evt){
-        game.setSpeed();
-      };
+      $('#settings-speed').change(function(evt){ game.setSpeed(); });
       game.setSpeed();
 
-      document.getElementById('settings-bears').onchange = function(evt){
-        game.setBears();
-      };
+      $('#settings-bears').change(function(evt){ game.setBears(); });
       game.setBears();
 
-      document.getElementById('board').onmousedown = function(evt) {
-        game.mouseClicked(evt);
-      };
-      document.getElementById('startpause').onclick = function(evt) {
-        game.startpause();
-      };
-      document.getElementById('reset').onclick = function(evt) {
-        game.reset();
-      };
+      $('#board').click(function(evt) { game.mouseClicked(evt); });
+      $('#startpause').click(function(evt) { game.startpause(); });
+      $('#reset').click(function(evt) { game.reset(); });
     }
   }, /* end Game */
 
@@ -270,6 +252,6 @@ var Spacebears = {
 
 
 
-document.addEventListener('DOMContentLoaded', function (evt) {
+$(function() {
   new Spacebears.Game().run();
 });
