@@ -25,16 +25,7 @@ block content
     #identica.box
       h4 kodeaffe @ identi.ca
       script(src="/js/jquery.livetwitter.min.js")
-      script
-        $(function() {
-          $("#identica-widget").liveTwitter('shensche', {
-            limit: 5,
-            service: 'identi.ca',
-            mode: 'user_timeline',
-            refresh: false,
-            showAuthor: false
-          });
-        });
+      script(src="/js/index.js")
       #identica-widget
 
   #sidebar-right

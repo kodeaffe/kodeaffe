@@ -29,7 +29,7 @@ exports.portfolio = [
         link_href: '',
         link_text: '',
         description: 'Administration of the host machine running kodeaffe.de and a couple of other domains.',
-        technologies: ['Debian', 'Apache', 'Supervisor', 'Exim', 'Courier IMAP/POP3', 'SSH', 'denyhosts', 'aide', 'logwatch', 'MySQL'],
+        technologies: ['Debian', 'Apache', 'Supervisor', 'Exim', 'IMAP', 'POP3', 'spamassassin', 'SSH', 'denyhosts', 'aide', 'logwatch', 'MySQL'],
         status: 'running'
       }
     ]
@@ -80,7 +80,7 @@ exports.portfolio = [
         end: '2012-04',
         link_href: 'http://transparency.ge/en',
         link_text: 'transparency.ge',
-        description: '<ul> <li>redeveloping TI Georgia\'s <a href="http://transparency.ge">website</a></li> <li>maintaining and enhancing the backend to <a href="http://parliament.transparency.ge/subscribe/?lang=en">Parliament Alert service</a></li> <li>graphical visualisation of <a href="http://transparency.ge/mediaownership/en/index.html">georgian advertising sector</a></li> <li>maintaining and enhancing a scraper of <a href="https://github.com/tigeorgia/Declaration.ge-PDF-Scraper">government income declarations</li> </ul>',
+        description: '<ul> <li>redeveloping TI Georgia\'s <a href="http://transparency.ge">website</a></li> <li>maintaining and enhancing the backend to <a href="http://parliament.transparency.ge/subscribe/?lang=en">Parliament Alert service</a></li> <li>graphical visualisation of <a href="http://transparency.ge/mediaownership/en/index.html">georgian advertising sector</a></li> <li>maintaining and enhancing a scraper of <a href="https://github.com/tigeorgia/Declaration.ge-PDF-Scraper">government income declarations</a></li> </ul>',
         technologies: ['PHP', 'Drupal', 'Python', 'Django', 'RapidSMS', 'D3', 'SVG', 'Javascript', 'CouchDB'],
         status: 'online'
       },
@@ -245,7 +245,7 @@ exports.portfolio = [
         link_href: 'http://sourceforge.net/projects/eveskillcheck',
         link_text: 'project page',
         description: 'This tool checks your character\'s remaining skill training time, using EVE\'s API. It also shows you the name of the skill and to which level it is trained. Available as command-line application and GNOME applet.',
-        technologies: ['Python', 'EVE API', 'GTK', 'GNOME'],
+        technologies: ['Python', 'EVE-API', 'GTK', 'GNOME'],
         status: 'released'
       }
     ]
