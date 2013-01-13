@@ -4,6 +4,15 @@ exports.portfolio = [
     year: '2013',
     items: [
       {
+        header: 'Rewrite of kodeaffe.de (2013-01)',
+        start: '2013-01',
+        link_href: 'http://kodeaffe.de',
+        link_text: 'website',
+        description: 'Implemented kodeaffe.de using a homebrew system based on <a href="http://expressjs.com/">express.js</a>',
+        technologies: ['Node.js', 'Express.js', 'JQuery', 'HTML', 'CSS', 'Jade'],
+        status: 'online'
+      },
+      {
         header: 'Python Developer at txtr.com',
         start: '2012-07',
         end: '',
@@ -14,12 +23,14 @@ exports.portfolio = [
         status: 'ongoing employment'
       },
       {
-        header: 'Rewrite of kodeaffe.de (2013-01)',
-        link_href: 'http://kodeaffe.de',
-        link_text: 'website',
-        description: 'Implemented kodeaffe.de using a homebrew system based on <a href="http://expressjs.com/">express.js</a>',
-        technologies: ['Express.js', 'JQuery', 'HTML', 'CSS', 'Jade'],
-        status: 'online'
+        header: 'Administration of kodeaffe.de\'s host',
+        start: '2007-04',
+        end: '',
+        link_href: '',
+        link_text: '',
+        description: 'Administration of the host machine running kodeaffe.de and a couple of other domains.',
+        technologies: ['Debian', 'Apache', 'Supervisor', 'Exim', 'Courier IMAP/POP3', 'SSH', 'denyhosts', 'aide', 'logwatch', 'MySQL'],
+        status: 'running'
       }
     ]
   },
@@ -45,6 +56,16 @@ exports.portfolio = [
         link_text: 'website',
         description: 'Development of a website to watch representative (in)action  in collaboration with <a href="http://transparency.ge">Transparency International Georgia</a> (TIG) and <a href="http://cipdd.org">Caucasus Institute for Peace Democracy and Development</a> (CIPDD). Representatives of National Parliament, Tbilisi City Hall + Ajara Supreme Council are watched, pulling in data from various TIG + CIPDD projects: voting behaviour + presence, income declarations, parliament alerts, questions, etc.',
         technologies: ['Python', 'Django', 'HTML', 'CSS', 'JQuery', 'PostgreSQL'],
+        status: 'online'
+      },
+      {
+        header: 'tbilisiopenlabs.org',
+        start: '2012-01',
+        end: '2012-04',
+        link_href: 'http://tbilisiopenlabs.org',
+        link_text: 'website',
+        description: 'Building and (still) hosting the website of the upcoming Tbilisi hackerspace called Tbilisi Open Labs - TOL',
+        technologies: ['Oxwall', 'PHP', 'MySQL'],
         status: 'online'
       }
     ]
