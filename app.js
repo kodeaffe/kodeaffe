@@ -1,6 +1,5 @@
-
 /**
- * Module dependencies.
+ * app.js for kodeaffe.de
  */
 
 var express = require('express')
@@ -11,16 +10,29 @@ var express = require('express')
   , portfolio = require('./routes/portfolio')
   , kartuliflash = require('./routes/kartuliflash')
   , spacebears = require('./routes/spacebears');
-
 var app = express();
+
 
 app.configure(function(){
   app.set('host', 'localhost');
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
+
+  if (app.get('env') == 'production') {
+    var fs = require('fs');
+    var access_logfile = fs.createWriteStream('log/access.log', {flags: 'a'});
+    app.use(express.logger({format: 'default', stream: access_logfile }));
+    app.enable('trust proxy');
+  } else {
+    app.use(express.logger('dev'));
+    app.use(express.errorHandler({
+      dumpExceptions: true,
+      showStack: true
+    }));
+  }
+
   app.use(express.favicon(__dirname + '/public/img/favicon.ico'));
-  app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
@@ -28,15 +40,8 @@ app.configure(function(){
   app.use(express.directory(__dirname + '/public'));
 });
 
-app.configure('development', function(){
-  app.use(express.errorHandler({
-    dumpExceptions: true,
-    showStack: true
-  }));
-});
-app.configure('production', function(){
-  app.enable('trust proxy');
-});
+
+
 
 urls([
   { pattern: '/', view: routes.index, name: 'index' },
