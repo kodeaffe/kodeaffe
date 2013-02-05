@@ -4,7 +4,7 @@ exports.portfolio = [
     year: '2013',
     items: [
       {
-        header: 'Rewrite of kodeaffe.de (2013-01)',
+        header: 'Rewrite of kodeaffe.de',
         start: '2013-01',
         link_href: 'http://kodeaffe.de',
         link_text: 'website',
