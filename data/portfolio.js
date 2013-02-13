@@ -103,6 +103,16 @@ exports.portfolio = [
         status: 'ignored'
       },
       {
+        header: 'enqu.de',
+        start: '2011-06',
+        end: '2011-10',
+        link_href: 'http://enqu.de',
+        link_text: 'website',
+        description: 'Development of a website for a local energy reseller.',
+        technologies: ['PHP', 'CakePHP', 'HTML', 'CSS', 'JQuery'],
+        status: 'released'
+      },
+      {
         header: 'Age Verification Module',
         start: '2011-06',
         link_href: 'projects/uc_checkout_validate/uc_checkout_agevalidate.diff',
