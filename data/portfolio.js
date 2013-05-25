@@ -29,7 +29,7 @@ exports.portfolio = [
         link_href: 'https://github.com/marmorkuchen/jw2html',
         link_text: 'github',
         description: 'A little tool to download issues of the <a href="http://jungle-world.com">Jungle World</a> and compress into single HTML file, so it can be easily converted to epub',
-        technologies: ['Python', 'BeautifulSoup', 'HTML'],
+        technologies: ['Python3', 'BeautifulSoup', 'HTML'],
         status: 'online'
       },
       {
@@ -67,13 +67,7 @@ exports.portfolio = [
         description: 'Building and (still) hosting the website of the upcoming Tbilisi hackerspace called Tbilisi Open Labs - TOL',
         technologies: ['Oxwall', 'PHP', 'MySQL'],
         status: 'online'
-      }
-    ]
-  },
-
-  {
-    year: '2011',
-    items: [
+      },
       {
         header: 'Lead Developer at Transparency International Georgia',
         start: '2011-11',
@@ -83,7 +77,13 @@ exports.portfolio = [
         description: '<ul> <li>redeveloping TI Georgia\'s <a href="http://transparency.ge">website</a></li> <li>maintaining and enhancing the backend to <a href="http://parliament.transparency.ge/subscribe/?lang=en">Parliament Alert service</a></li> <li>graphical visualisation of <a href="http://transparency.ge/mediaownership/en/index.html">georgian advertising sector</a></li> <li>maintaining and enhancing a scraper of <a href="https://github.com/tigeorgia/Declaration.ge-PDF-Scraper">government income declarations</a></li> </ul>',
         technologies: ['PHP', 'Drupal', 'Python', 'Django', 'RapidSMS', 'D3', 'SVG', 'Javascript', 'CouchDB'],
         status: 'online'
-      },
+      }
+    ]
+  },
+
+  {
+    year: '2011',
+    items: [
       {
         header: 'Kartuli Flash',
         start: '2011-09',
