@@ -23,6 +23,16 @@ exports.portfolio = [
         status: 'ongoing employment'
       },
       {
+        header: 'jw2html',
+        start: '2012-08',
+        end: '2013-05',
+        link_href: 'https://github.com/marmorkuchen/jw2html',
+        link_text: 'github',
+        description: 'A little tool to download issues of the <a href="http://jungle-world.com">Jungle World</a> and compress into single HTML file, so it can be easily converted to epub',
+        technologies: ['Python', 'BeautifulSoup', 'HTML'],
+        status: 'online'
+      },
+      {
         header: 'Administration of kodeaffe.de\'s host',
         start: '2007-04',
         end: '',
@@ -39,24 +49,14 @@ exports.portfolio = [
     year: '2012',
     items: [
       {
-        header: 'jw2html',
-        start: '2012-08',
-        end: '2012-11',
-        link_href: 'https://github.com/marmorkuchen/jw2html',
-        link_text: 'github',
-        description: 'A little tool to download issues of the <a href="http://jungle-world.com">Jungle World</a> and compress into single HTML file, so it can be easily converted to epub',
-        technologies: ['Python', 'BeautifulSoup', 'HTML'],
-        status: 'online'
-      },
-      {
         header: 'shenmartav.ge',
         start: '2012-03',
         end: '2012-11',
-        link_href: 'http://shenmartav.ge',
-        link_text: 'website',
+        link_href: 'http://github.com/tigeorgia/shenmartav',
+        link_text: 'github',
         description: 'Development of a website to watch representative (in)action  in collaboration with <a href="http://transparency.ge">Transparency International Georgia</a> (TIG) and <a href="http://cipdd.org">Caucasus Institute for Peace Democracy and Development</a> (CIPDD). Representatives of National Parliament, Tbilisi City Hall + Ajara Supreme Council are watched, pulling in data from various TIG + CIPDD projects: voting behaviour + presence, income declarations, parliament alerts, questions, etc.',
         technologies: ['Python', 'Django', 'HTML', 'CSS', 'JQuery', 'PostgreSQL'],
-        status: 'online'
+        status: 'was online, currently only on github'
       },
       {
         header: 'tbilisiopenlabs.org',
