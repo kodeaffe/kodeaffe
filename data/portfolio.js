@@ -6,16 +6,17 @@ exports.portfolio = [
       {
         header: 'Rewrite of kodeaffe.de',
         start: '2013-01',
+        end: 'ongoing',
         link_href: 'http://kodeaffe.de',
         link_text: 'website',
         description: 'Implemented kodeaffe.de using a homebrew system based on <a href="http://expressjs.com/">express.js</a>',
-        technologies: ['Node.js', 'Express.js', 'JQuery', 'HTML', 'CSS', 'Jade'],
+        technologies: ['Node.js', 'Express.js', 'Bootstrap.js', 'JQuery', 'HTML', 'CSS', 'Jade'],
         status: 'online'
       },
       {
         header: 'Python Developer at txtr.com',
         start: '2012-07',
-        end: '',
+        end: 'ongoing',
         link_href: 'http://de.txtr.com',
         link_text: 'website',
         description: 'Improved the performance and internal architecture of a large legacy web application with dependencies to other in-house applications. Notably, moving from Jython to cPython and reworking the URL configuration system.',
@@ -25,7 +26,7 @@ exports.portfolio = [
       {
         header: 'jw2html',
         start: '2012-08',
-        end: '2013-05',
+        end: 'ongoing',
         link_href: 'https://github.com/marmorkuchen/jw2html',
         link_text: 'github',
         description: 'A little tool to download issues of the <a href="http://jungle-world.com">Jungle World</a> and compress into single HTML file, so it can be easily converted to epub',
@@ -35,7 +36,7 @@ exports.portfolio = [
       {
         header: 'Administration of kodeaffe.de\'s host',
         start: '2007-04',
-        end: '',
+        end: 'ongoing',
         link_href: '',
         link_text: '',
         description: 'Administration of the host machine running kodeaffe.de and a couple of other domains.',
@@ -73,8 +74,8 @@ exports.portfolio = [
         start: '2011-11',
         end: '2012-04',
         link_href: 'http://transparency.ge/en',
-        link_text: 'transparency.ge',
-        description: '<ul> <li>redeveloping TI Georgia\'s <a href="http://transparency.ge">website</a></li> <li>maintaining and enhancing the backend to <a href="http://parliament.transparency.ge/subscribe/?lang=en">Parliament Alert service</a></li> <li>graphical visualisation of <a href="http://transparency.ge/mediaownership/en/index.html">georgian advertising sector</a></li> <li>maintaining and enhancing a scraper of <a href="https://github.com/tigeorgia/Declaration.ge-PDF-Scraper">government income declarations</a></li> </ul>',
+        link_text: 'website',
+        description: 'Redevelopment of TI Georgia\'s <a href="http://transparency.ge">website</a>, maintainance and enhancement of the backend to <a href="http://parliament.transparency.ge/subscribe/?lang=en">Parliament Alert service</a>, graphical visualisation of the <a href="http://transparency.ge/mediaownership/en/index.html">georgian advertising sector</a>, maintenance and enhancement of a scraper for <a href="https://github.com/tigeorgia/Declaration.ge-PDF-Scraper">government income declarations</a>',
         technologies: ['PHP', 'Drupal', 'Python', 'Django', 'RapidSMS', 'D3', 'SVG', 'Javascript', 'CouchDB'],
         status: 'online'
       }
@@ -169,14 +170,9 @@ exports.portfolio = [
         link_href: '/spacebears',
         link_text: 'game',
         description: 'A demo to showcase HTML5',
-        technologies: ['HTML', 'CSS', 'Javascript'],
+        technologies: ['HTML', 'CSS', 'JQuery'],
         status: 'online'
-      }
-    ]
-  },
-  {
-    year: '2009',
-    items: [
+      },
       {
         header: 'mldata.org',
         start: '2009-09',
@@ -187,6 +183,11 @@ exports.portfolio = [
         technologies: ['Python', 'Django', 'HTML', 'CSS', 'JQuery'],
         status: 'online'
       },
+    ]
+  },
+  {
+    year: '2009',
+    items: [
       {
         header: 'shannoncallahan.de',
         start: '2009-07',
