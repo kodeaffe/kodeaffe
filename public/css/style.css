@@ -1,108 +1,83 @@
 body {
-  font: 14px Verdana, sans-serif;
   background-color: #131;
-  padding: 5px;
-  margin: 0;
+  padding: 110px 5px 5px 5px;
 }
 
 a {
   color: #999;
+  text-decoration: none;
+  border-bottom: 1px dotted #999;
+}
+a:focus {
+  color: #eee;
 }
 a:hover {
   color: #eee;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
 }
-h1, h2, h3, h4, #follow-me-link {
+
+h1, h2, h3, h4, legend, #follow-me-link {
   color: #860;
-  padding: 0;
-  margin: 0;
-  font-weight: bold;
 }
 
 div, p {
   color: #ccc;
-  padding: 0;
 }
 
 
-.clear {
-  clear: both;
+.navbar {
+  margin-left: 25px;
+  margin-right: 5px;
 }
-
-#main {
-  float: left;
-  width: 75%;
-}
-#sidebar-right {
-  float: right;
-  width: 24%;
-  margin-left: 1%;
-}
-
-
-#header {
+.navbar .navbar-inner {
   background-color: #222;
-  padding: 10px;
+  background-image: none;
 }
-#header a {
+.navbar .navbar-inner  {
+  border: none;
+}
+.navbar .brand {
+  background-color: #222;
+  text-shadow: none;
+}
+.navbar a {
   text-decoration: none;
 }
-#header #logo {
+.navbar #logo {
   float: left;
 }
-#header #site {
+.navbar #site {
   float:left;
   padding-left: 5px;
 }
-#header #menu {
-  margin: 0;
-  padding: 0;
-  padding-left: 0; /* some browsers need this */
-}
-#header #menu li {
-  display: inline;
-  list-style-type: none;
-  border-right: 1px solid;
-  padding: 0 3px;
-}
-#header #menu li.first {
-  padding: 0 3px 0 0;
-}
-
-#header #menu li.last {
-  border-right: none;
-}
-#header #menu li a {
+.navbar .nav > li > a {
+  text-shadow: none;
   color: #360;
+  font-size: large;
+  text-decoration: none;
+  border-bottom: none;
 }
-#header #menu li a:hover {
+.navbar .nav > li > a:hover {
   color: #691;
   text-decoration: underline;
+  border-bottom: none;
 }
 
 
-#content {
+.container-fluid {
   background-color: #333;
-  padding: 10px;
 }
 
 .box {
   border: 1px solid #555a55;
   background-color: #444a44;
   margin: 10px 0;
-  padding: 5px;
-}
-
-
-.box ul {
-  padding-left: 15px;
-}
-
-
-#links {
-  min-height: 400px;
+  padding: 0 5px;
 }
 
 
 #footer {
-  font-size: xx-small;
+  color: #eee;
+  font-size: x-small;
 }

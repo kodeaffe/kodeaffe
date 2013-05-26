@@ -11,13 +11,14 @@ block content
 
   #gamezone
     // _must_ specify width + height in canvas tag to have bears in right size
-    canvas(id="board", width="550", height="413")
-    #panel(class="box")
+    canvas.span4(id="board", width="550", height="413")
+    #panel.span3.box
       h3 Catch the Space Bears!
-      h4 A demo to showcase HTML5
 
       #intro
-        | Grab a bear to hear an awesome sound! Every miss will give you a one-point penalty.
+        | Grab a bear to hear an awesome sound!
+        br
+        | Every miss will give you a one-point penalty.
         br
         | Fastest game: 
         span(id="fastest") 0
@@ -25,29 +26,36 @@ block content
 
       #scoreboard
         h4 Scoreboard
-        label Miss:
-        span(id="miss") 0
-        br
-        label Score: 
-        span(id="score") 0
-        br
-        label Elapsed: 
-        span(id="elapsed") 0
-        |  s
+        .row-fluid
+          .span2 Miss:
+          .span2
+            span(id="miss") 0
+          .span2 Score:
+          .span2
+            span(id="score") 0
+          .span2 Elapsed:
+          .span2
+            span(id="elapsed") 0
+            |  s
 
       #actions
         h4 Actions
-        button(id="startpause") Start
-        button(id="reset") Reset
+        button.btn(id="startpause") Start
+        button.btn(id="reset") Reset
 
       #settings
-        h4() Settings
-        form
-          label Win Score 
-          input(id="settings-winscore", type="range", min="1", max="99", value="10")
-          br
-          label Speed 
-          input(id="settings-speed", type="range", min="1", max="9", value="1")
-          br
-          label Bears 
-        input(id="settings-bears", type="range", min="1", max="5", value="4")
+        form.form-inline
+          h4 Settings
+          label Win Score
+            input(id="settings-winscore", type="range", min="1", max="99", value="10")
+          label Speed
+            input(id="settings-speed", type="range", min="1", max="9", value="1")
+          label Bears
+            input(id="settings-bears", type="range", min="1", max="5", value="4")
+
+    #finish-modal.modal.hide.fade(tabindex="-1", role="dialog", aria-hidden="true")
+      .modal-header
+        button.close(data-dismiss="modal", aria-hidden="true") x
+        h3 You Win!
+      .modal-footer
+        button.btn(data-dismiss="modal", aria-hidden="true") Close

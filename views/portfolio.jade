@@ -6,51 +6,50 @@ block extrahead
     script(src="/js/portfolio.js")
 
 block content
-  #main
+  #main.span9
     h2 Portfolio
 
     #intro.
-      Have a look at my IT-related doings here. Currently, I am not available for hire, so please check back later. Also, I have finally decided to use github as my main project repository, check:
+      Have a look at my IT-related doings here and check github for my main project repository:
     p
       a(title="kodeaffe @ github",href="http://github.com/marmorkuchen") http://github.com/marmorkuchen
 
     #portfolio
       - for (var i in portfolio)
-        div(id="year-#{portfolio[i].year}")
+        div(id="year-#{portfolio[i].year}", class="row-fluid year")
           h3
             a.toggle= portfolio[i].year
-              span.arrow &rarr;
-          - for item in portfolio[i].items
-            table.box
-              tr
-                td(colspan="2")
-                  - var header = item['header']
-                  - if ('start' in item && 'end' in item)
-                    - header += ' (' + item['start'] + ' - ' + item['end'] + ')'
-                  - else if ('start' in item)
-                    - header += ' (' + item['start'] + ')'
-                  - else if ('end' in item)
-                    - header += ' (- ' + item['end'] + ')'
-                  h4= header
+              i.arrow.icon-arrow-right.icon-white
+          .items
+            - for item in portfolio[i].items
+              .box
+                .row-fluid
+                  .span12
+                    - var header = item['header']
+                    - if ('start' in item && 'end' in item)
+                      - header += ' (' + item['start'] + ' - ' + item['end'] + ')'
+                    - else if ('start' in item)
+                      - header += ' (' + item['start'] + ')'
+                    - else if ('end' in item)
+                      - header += ' (- ' + item['end'] + ')'
+                    h4= header
 
-              tr
-                td.label
-                  a(href="#{item['link_href']}") #{item['link_text']}
-                td!= item['description']
+                .row-fluid
+                  .span1
+                    a(href="#{item['link_href']}") #{item['link_text']}
+                  .span11!= item['description']
 
-              tr
-                td.label technologies
-                td= item['technologies'].join(', ')
+                .row-fluid
+                  .span1 tools
+                  .span11= item['technologies'].join(', ')
 
-              tr
-                td.label status
-                td= item['status']
+                .row-fluid 
+                  .span1 status
+                  .span11= item['status']
 
-  #sidebar-right
+  #sidebar-right.span3
     #technologies.box
-      h4 Technologies
+      h3 Technologies
       ul
         - for (var i in technologies)
           li(id="#{technologies[i]}") #{technologies[i]}
-
-  div.clear

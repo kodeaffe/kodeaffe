@@ -2,22 +2,26 @@
 
 $(function() {
   $('#portfolio .toggle').click(function() {
-    var tables = $(this).parent().siblings('table');
+    var items = $(this).parent().siblings('.items');
     var arrow = $(this).find('.arrow');
-    if ($(tables).is(':visible')) {
-      $(tables).hide();
-      $(arrow).html('&rarr;');
+    if ($(items).is(':visible')) {
+      $(items).hide();
+      $(arrow).removeClass('icon-arrow-down');
+      $(arrow).addClass('icon-arrow-right');
     } else {
-      $(tables).show();
-      $(arrow).html('&darr;');
+      $(items).show();
+      $(arrow).removeClass('icon-arrow-right');
+      $(arrow).addClass('icon-arrow-down');
     }
     return false;
   });
 
-  $('#portfolio table').hide();
+  $('#portfolio .year .items').hide();
   var currentYear = new Date().getFullYear();
   for (year = currentYear; year > currentYear - 5; year--) {
-    $('#portfolio #year-' + year + ' table').show();
-    $('#portfolio #year-' + year + ' .arrow').html('&darr;');
+    $('#portfolio #year-' + year + ' .items').show();
+    var arrow = $('#portfolio #year-' + year + ' .arrow');
+    $(arrow).removeClass('icon-arrow-right');
+    $(arrow).addClass('icon-arrow-down');
   }
 });

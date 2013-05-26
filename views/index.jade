@@ -6,11 +6,11 @@ block extrahead
 
 
 block content
-  #main
+  #main.span9
     h2 Welcome to my humble abode on the interwebz
 
     #contact.box
-      h4 You can contact me via:
+      h3 Contact
       ul
         li mailto: webmaster at kodeaffe dot de
         li xmpp: shensche at jabber dot ccc dot de
@@ -23,14 +23,14 @@ block content
         li Otherwise I'm bouncing around planet Earth, currently in Berlin. Give me a shout if you want to hook up somewhere around these parts.
 
     #identica.box
-      h4 kodeaffe @ identi.ca
+      h3 kodeaffe @ identi.ca
       script(src="/js/jquery.livetwitter.min.js")
       script(src="/js/index.js")
       #identica-widget
 
-  #sidebar-right
+  #sidebar-right.span3
     #links.box
-      h4 Interesting Links
+      h3 Interesting Links
       ul
         - for (var name in interestingLinks)
           - var link = interestingLinks[name]
@@ -38,4 +38,3 @@ block content
               a(href="#{link.href}") #{name}
               br
               | #{link.description}
-  div.clear

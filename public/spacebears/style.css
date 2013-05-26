@@ -1,26 +1,14 @@
 /* CSS for spacebears game */
 
 canvas {
+  width: 550px !important;
+  height: 413px !important;
   float:left;
   background:url(/spacebears/img/background.jpg);
   border: 0;
   padding: 0;
   margin-right: 5px;
-}
-
-label {
-  display: block;
-  float: left;
-  width: 100px;
-}
-
-
-#gamezone {
-  width: 900px;
-  height: 413px;
-  border: 0;
-  padding: 0;
-  margin: 2px;
+  margin-bottom: 10px;
 }
 
 #panel {
@@ -57,5 +45,12 @@ label {
 
 
 #actions button {
+  margin-left: 2px;
   width: 100px;
+}
+
+#settings input {
+  background-color: #ccc;
+  width: 50px;
+  margin: 0 3px;
 }

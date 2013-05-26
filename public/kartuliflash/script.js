@@ -69,6 +69,9 @@ function populateLetterTable() {
 };
 
 
+function showCorrect() {
+}
+
 $(function() {
     $('#showtable').click(function(){
         if ($('#sidebar').is(':visible')) {
@@ -91,7 +94,8 @@ $(function() {
         $('#georgian').html(Current[0]);
         $('#english').hide();
         $('#english').html(Current[1] + ' ' + Current[2]);
-        $('#english').removeClass('correct').removeClass('wrong');
+        $('#english').removeClass('text-success').removeClass('text-error');
+        $('#english').parent().parent().removeClass('success').removeClass('error');
         $('#check').show();
         return false;
     });
@@ -113,10 +117,12 @@ $(function() {
         }
 
         if (correct) {
-           $('#english').addClass('correct');
+           $('#english').addClass('text-success');
+           $('#english').parent().parent().addClass('success');
            Score.correct += 1;
         } else {
-           $('#english').addClass('wrong');
+           $('#english').addClass('text-error');
+           $('#english').parent().parent().addClass('error');
         }
         Score.total += 1;
         $('#score').html(Score.correct + ' / ' + Score.total);
@@ -135,6 +141,7 @@ $(function() {
         Modifier = event.which;
     });
 
+    $('#sidebar').hide();
     $('#new').click();
 
     populateLetterTable();

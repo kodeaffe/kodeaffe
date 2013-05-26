@@ -1,30 +1,15 @@
 /* CSS for portfolio */
 
-#portfolio table {
-  margin-bottom:20px;
-  width: 100%;
-}
-
-#portfolio tr {
-  vertical-align:top;
-}
-#portfolio td.label {
-  width: 150px;
-}
-
-#portfolio caption {
-  text-align:left;
-  font-size:x-large;
-}
-
 #portfolio h3, #portfolio h4 {
-  color: #b8b7b7;
+  color: #ccc;
 }
-
 
 #portfolio .toggle {
   cursor: pointer;
+  color: #fff;
 }
-#portfolio .toggle .arrow {
-  font-size: smaller;
+
+#portfolio .icon-arrow-right, #portfolio .icon-arrow-down {
+  margin-top: 7px;
+  margin-left: 2px;
 }

@@ -7,25 +7,34 @@ block extrahead
 
 
 block content
-  h2 Georgian Letter Flashcards
+  .row-fluid
+    .span12
+      h2 Georgian Letter Flashcards
 
-  #arena
-    form
-      #flashcard.box
-        div Georgian: 
-          span(id="georgian")
-        div English: 
-          input(type="text", id="solution", size="3", maxlength="3")
-          button(id="check") Check
-          span(id="english")
-        button(id="new") New Card (Alt+n)
+  .row-fluid
+    #main.span6
+      form.form-horizontal
+        #flashcard.box.row-fluid
+          .control-group
+            label.control-label Georgian
+            .controls
+              span(id="georgian")
+          .control-group
+            label.control-label English
+            .controls
+              input(type="text", id="solution", size="3", maxlength="3")
+              button.btn(id="check") Check
+              span(id="english")
+          .control-group
+            .controls
+              button.btn(id="new") New Card (Alt+n)
 
-      #scoreboard.box Score: 
-        span(id="score") 0 / 0
-        button(id="showtable") Show Table
+        #scoreboard.box.row-fluid
+          .span6 Score: 
+            span(id="score") 0 / 0
+          .span6
+            button.btn.pull-right(id="showtable") Show Table
 
-  #sidebar.box
-    table(id="letter-table")
-      caption Letter Table
-
-  br(style="clear:both")
+    #sidebar.box.span6
+      table.table.table-striped.table-bordered(id="letter-table")
+        caption Letter Table

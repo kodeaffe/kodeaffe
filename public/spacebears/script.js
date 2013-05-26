@@ -168,12 +168,12 @@ var Spacebears = {
       this.applause.play();
 
       var elapsed = Math.floor(this.elapsed / 1000);
-      window.alert("Well done!\nYou needed " + elapsed + 's to catch the bears.');
-
       if (this.elapsed < this.fastest || this.fastest == 0) {
         this.fastest = this.elapsed;
         $('#fastest').html(Math.floor(this.fastest / 1000));
       }
+
+      $('#finish-modal').modal();
       this.reset();
     };
 
