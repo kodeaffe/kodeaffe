@@ -1,16 +1,11 @@
 /* stylesheet for kartuli flash */
 
-.box {
-  padding: 5px;
-}
-
 .table-striped tbody > tr:nth-child(2n+1) > td, .table-striped tbody > tr:nth-child(2n+1) > th {
     background-color: #333;
 }
 
-
 #georgian {
-  font-size: x-large;
+  font-size: larger;
 }
 
 #sidebar caption {
@@ -21,4 +16,12 @@
 
 #flashcard input {
   margin-right: 2px;
+}
+
+#flashcard #showtable {
+  margin-left: 2px;
+}
+
+#flashcard #english {
+  font-size: larger;
 }

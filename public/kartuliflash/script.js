@@ -1,5 +1,7 @@
-var Modifier = null;
-var Letters = [
+var Kartuliflash = {
+  modifier: null,
+  current: null,
+  letters: [
     ['ბ', 'b', 'as in bat'],
     ['გ', 'g', 'as in go'],
     ['დ', 'd', 'as in dog'],
@@ -33,46 +35,46 @@ var Letters = [
     ['ი', 'ee', 'as in knee'],
     ['ო', 'oh', 'as in doh'],
     ['უ', 'oo', 'as in boot'],
-];
-var Current = null;
-var Score = {
+  ],
+  score: {
     correct: 0,
-    total: 0,
-}
+    total: 0
+  },
 
 
-function populateLetterTable() {
-  var table = $('#letter-table');
-  for (var i = 0; i < Letters.length; i += 2) {
-    var tr = $('<tr/>');
-
-    var td = $('<td/>');
-    td.addClass('georgian-table');
-    td.html(Letters[i][0]);
-    tr.append(td);
-
-    td = $('<td/>');
-    td.html(Letters[i][1] + ' ' + Letters[i][2]);
-    tr.append(td);
-
-    if (i + 1 < Letters.length) {
-      td = $('<td/>');
-      td.html(Letters[i+1][0]);
+  addLetterTableColumnSet: function(tr, idx, set) {
+    if (idx + set < Kartuliflash.letters.length) {
+      var td = $('<td/>');
+      td.html(Kartuliflash.letters[idx+set][0]);
       tr.append(td);
+
       td = $('<td/>');
-      td.html(Letters[i+1][1] + ' ' + Letters[i+1][2]);
+      td.html(
+        Kartuliflash.letters[idx+set][1] +
+        ' ' +
+        Kartuliflash.letters[idx+set][2]);
       tr.append(td);
+    } else {
+      tr.append($('<td/>'), $('<td/>'));
     }
-
-    table.append(tr);
-  }
-};
+  },
 
 
-function showCorrect() {
-}
+  populateLetterTable: function() {
+    var table = $('#letter-table');
+    var letters_length = Kartuliflash.letters.length;
+    var num_sets = 3;
+    for (var i = 0; i < letters_length; i += num_sets) {
+      var tr = $('<tr/>');
+      for (var set = 0; set < num_sets; set++) {
+        Kartuliflash.addLetterTableColumnSet(tr, i, set);
+      }
+      table.append(tr);
+    }
+  },
 
-$(function() {
+
+  init: function() {
     $('#showtable').click(function(){
         if ($('#sidebar').is(':visible')) {
             $('#sidebar').hide();
@@ -85,15 +87,15 @@ $(function() {
     });
 
     $('#new').click(function(){
-        var idx = Math.round(Math.random() * (Letters.length - 1));
-        Current = Letters[idx];
+        var idx = Math.round(Math.random() * (Kartuliflash.letters.length - 1));
+        Kartuliflash.current = Kartuliflash.letters[idx];
 
         $('#solution').removeAttr('disabled');
         $('#solution').val('');
         $('#solution').focus();
-        $('#georgian').html(Current[0]);
+        $('#georgian').html(Kartuliflash.current[0]);
         $('#english').hide();
-        $('#english').html(Current[1] + ' ' + Current[2]);
+        $('#english').html(Kartuliflash.current[1] + ' ' + Kartuliflash.current[2]);
         $('#english').removeClass('text-success').removeClass('text-error');
         $('#english').parent().parent().removeClass('success').removeClass('error');
         $('#check').show();
@@ -105,10 +107,10 @@ $(function() {
         if (!solution) return false;
 
         var correct = false;
-        if (solution == Current[1]) {
+        if (solution == Kartuliflash.current[1]) {
             correct = true;
         } else {
-            var vw = Current[1].split('/');
+            var vw = Kartuliflash.current[1].split('/');
             if (vw.length == 2) {
                 if (solution == vw[0] || solution == vw[1]) {
                     correct = true;
@@ -119,13 +121,13 @@ $(function() {
         if (correct) {
            $('#english').addClass('text-success');
            $('#english').parent().parent().addClass('success');
-           Score.correct += 1;
+           Kartuliflash.score.correct += 1;
         } else {
            $('#english').addClass('text-error');
            $('#english').parent().parent().addClass('error');
         }
-        Score.total += 1;
-        $('#score').html(Score.correct + ' / ' + Score.total);
+        Kartuliflash.score.total += 1;
+        $('#score').html(Kartuliflash.score.correct + ' / ' + Kartuliflash.score.total);
 
         $('#english').show();
         $('#check').hide();
@@ -135,14 +137,18 @@ $(function() {
     });
 
     $(document).keydown(function (event) {
-        if (Modifier == 18 && event.which == 78) { // Alt+n
+        if (Kartuliflash.modifier == 18 && event.which == 78) { // Alt+n
             $('#new').click()
         }
-        Modifier = event.which;
+        Kartuliflash.modifier = event.which;
     });
 
     $('#sidebar').hide();
     $('#new').click();
 
-    populateLetterTable();
-});
+    Kartuliflash.populateLetterTable();
+  }
+};
+
+
+$(function() { Kartuliflash.init(); });

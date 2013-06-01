@@ -10,30 +10,33 @@ block content
   .row-fluid
     .span12
       h2 Georgian Letter Flashcards
+      p Type in the english equivalent to the georgian character displayed  Hit 'Check' or press &lt;Enter&gt; to see if you were right. Hit 'New Card' or press &lt;Alt-n&gt; to deal a new card.
+      p Reveal the full character table by hitting 'Show Table'.
 
   .row-fluid
     #main.span6
       form.form-horizontal
-        #flashcard.box.row-fluid
+        #flashcard.box
           .control-group
             label.control-label Georgian
-            .controls
+            .controls.readonly
               span(id="georgian")
           .control-group
             label.control-label English
             .controls
               input(type="text", id="solution", size="3", maxlength="3")
               button.btn(id="check") Check
-              span(id="english")
+              strong
+                span(id="english")
           .control-group
             .controls
-              button.btn(id="new") New Card (Alt+n)
+                button.btn(id="new") New Card (Alt+n)
+                button.btn(id="showtable") Show Table
 
-        #scoreboard.box.row-fluid
-          .span6 Score: 
-            span(id="score") 0 / 0
-          .span6
-            button.btn.pull-right(id="showtable") Show Table
+          #scoreboard.control-group
+            label.control-label Score
+            .controls.readonly
+              span(id="score") 0 / 0
 
     #sidebar.box.span6
       table.table.table-striped.table-bordered(id="letter-table")
