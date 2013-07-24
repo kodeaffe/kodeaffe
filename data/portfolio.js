@@ -62,12 +62,12 @@ exports.portfolio = [
       {
         header: 'tbilisiopenlabs.org',
         start: '2012-01',
-        end: '2012-04',
-        link_href: 'http://tbilisiopenlabs.org',
-        link_text: 'website',
-        description: 'Building and (still) hosting the website of the upcoming Tbilisi hackerspace called Tbilisi Open Labs - TOL',
+        end: '2013-04',
+        link_href: '',
+        link_text: '',
+        description: 'Building and hosting the website of the upcoming Tbilisi hackerspace called Tbilisi Open Labs - TOL',
         technologies: ['Oxwall', 'PHP', 'MySQL'],
-        status: 'online'
+        status: 'offline'
       },
       {
         header: 'Lead Developer at Transparency International Georgia',
@@ -75,7 +75,7 @@ exports.portfolio = [
         end: '2012-04',
         link_href: 'http://transparency.ge/en',
         link_text: 'website',
-        description: 'Redevelopment of TI Georgia\'s <a href="http://transparency.ge">website</a>, maintainance and enhancement of the backend to <a href="http://parliament.transparency.ge/subscribe/?lang=en">Parliament Alert service</a>, graphical visualisation of the <a href="http://transparency.ge/mediaownership/en/index.html">georgian advertising sector</a>, maintenance and enhancement of a scraper for <a href="https://github.com/tigeorgia/Declaration.ge-PDF-Scraper">government income declarations</a>',
+        description: 'Redevelopment of TI Georgia\'s <a href="http://transparency.ge">website</a>, maintainance and enhancement of the backend to Parliament Alert service, graphical visualisation of the <a href="http://transparency.ge/mediaownership/en/index.html">georgian advertising sector</a>, maintenance and enhancement of a scraper for <a href="https://github.com/tigeorgia/Declaration.ge-PDF-Scraper">government income declarations</a>',
         technologies: ['PHP', 'Drupal', 'Python', 'Django', 'RapidSMS', 'D3', 'SVG', 'Javascript', 'CouchDB'],
         status: 'online'
       }
