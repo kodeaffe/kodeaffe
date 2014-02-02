@@ -1,37 +1,27 @@
 /* portfolio for kodeaffe.de */
 exports.portfolio = [
   {
-    year: '2013',
+    year: '2014',
     items: [
       {
-        header: 'Rewrite of kodeaffe.de',
-        start: '2013-01',
+        header: 'Django Developer at sinnwerkstatt.com',
+        start: '2013-11',
         end: 'ongoing',
-        link_href: 'http://kodeaffe.de',
+        link_href: 'http://sinnwerkstatt.com',
         link_text: 'website',
-        description: 'Implemented kodeaffe.de using a homebrew system based on <a href="http://expressjs.com/">express.js</a>',
-        technologies: ['Node.js', 'Express.js', 'Bootstrap.js', 'JQuery', 'HTML', 'CSS', 'Jade'],
-        status: 'online'
+        description: 'Development of a social media / groupware platform',
+        technologies: ['Python', 'Django', 'HTML', 'JQuery', 'CSS'],
+        status: 'ongoing freelance work'
       },
       {
-        header: 'Python Developer at txtr.com',
-        start: '2012-07',
+        header: 'Software Developer at tesobe.com',
+        start: '2013-08',
         end: 'ongoing',
-        link_href: 'http://de.txtr.com',
+        link_href: 'http://tesobe.com',
         link_text: 'website',
-        description: 'Improved the performance and internal architecture of a large legacy web application with dependencies to other in-house applications. Notably, moving from Jython to cPython and reworking the URL configuration system.',
-        technologies: ['Python', 'Django', 'HTML', 'CSS', 'JQuery', 'MySQL'],
+        description: 'System administrator for the company\'s hard- and software: phone system, internal and external Linux servers. Also writing applications for external clients',
+        technologies: ['Python', 'Django', 'Linux', 'Apache', 'KVM', 'Postfix', 'PostgreSQL', 'Jetty', 'OpenVPN', 'iptables/ufw'],
         status: 'ongoing employment'
-      },
-      {
-        header: 'jw2html',
-        start: '2012-08',
-        end: 'ongoing',
-        link_href: 'https://github.com/marmorkuchen/jw2html',
-        link_text: 'github',
-        description: 'A little tool to download issues of the <a href="http://jungle-world.com">Jungle World</a> and compress into single HTML file, so it can be easily converted to epub',
-        technologies: ['Python3', 'BeautifulSoup', 'HTML'],
-        status: 'online'
       },
       {
         header: 'Administration of kodeaffe.de\'s host',
@@ -42,6 +32,41 @@ exports.portfolio = [
         description: 'Administration of the host machine running kodeaffe.de and a couple of other domains.',
         technologies: ['Debian', 'Apache', 'Supervisor', 'Exim', 'IMAP', 'POP3', 'spamassassin', 'SSH', 'denyhosts', 'aide', 'logwatch', 'MySQL'],
         status: 'running'
+      }
+    ]
+  },
+  {
+    year: '2013',
+    items: [
+      {
+        header: 'Rewrite of kodeaffe.de',
+        start: '2013-01',
+        end: '2013-07',
+        link_href: 'http://kodeaffe.de',
+        link_text: 'website',
+        description: 'Implemented kodeaffe.de using a homebrew system based on <a href="http://expressjs.com/">express.js</a>',
+        technologies: ['Node.js', 'Express.js', 'Bootstrap.js', 'JQuery', 'HTML', 'CSS', 'Jade'],
+        status: 'online'
+      },
+      {
+        header: 'Python Developer at txtr.com',
+        start: '2012-07',
+        end: '2013-07',
+        link_href: 'http://de.txtr.com',
+        link_text: 'website',
+        description: 'Improved the performance and internal architecture of a large legacy web application with dependencies to other in-house applications. Notably, moving from Jython to cPython and reworking the URL configuration system.',
+        technologies: ['Python', 'Django', 'HTML', 'CSS', 'JQuery', 'MySQL'],
+        status: 'terminated'
+      },
+      {
+        header: 'jw2html',
+        start: '2012-08',
+        end: 'ongoing',
+        link_href: 'https://github.com/marmorkuchen/jw2html',
+        link_text: 'github',
+        description: 'A little tool to download issues of the <a href="http://jungle-world.com">Jungle World</a> and compress into single HTML file, so it can be easily converted to epub',
+        technologies: ['Python3', 'BeautifulSoup', 'HTML'],
+        status: 'online'
       }
     ]
   },
@@ -77,7 +102,7 @@ exports.portfolio = [
         link_text: 'website',
         description: 'Redevelopment of TI Georgia\'s <a href="http://transparency.ge">website</a>, maintainance and enhancement of the backend to Parliament Alert service, graphical visualisation of the <a href="http://transparency.ge/mediaownership/en/index.html">georgian advertising sector</a>, maintenance and enhancement of a scraper for <a href="https://github.com/tigeorgia/Declaration.ge-PDF-Scraper">government income declarations</a>',
         technologies: ['PHP', 'Drupal', 'Python', 'Django', 'RapidSMS', 'D3', 'SVG', 'Javascript', 'CouchDB'],
-        status: 'online'
+        status: 'terminated'
       }
     ]
   },
@@ -247,7 +272,7 @@ exports.portfolio = [
         link_text: 'github',
         description: 'Participiation in the development of groundcrew: it can involve you in a million different kinds of things in your community, from pick-up sports games, to volunteering, to giant art projects.',
         technologies: ['Ruby', 'Rails', 'JQuery'],
-        status: 'online'
+        status: 'offline'
       },
       {
         header: 'EVESkillCheck',
@@ -309,7 +334,7 @@ exports.portfolio = [
         link_text: 'website',
         description: '<ul><li>Implementation of a Python application to automatically move sites between exchanges in Nokia\'s ActioNet.</li><li>Security fix-up of various servers: user roles, SSH public key authentication.</li><li>Implementation of an SNMP monitoring system on various servers.</li><li>Refactoring and proof-reading of router software for Nokia\'s ActioNet and Fleetlink.</li><li>Various bugfixes and small features implemented in client\'s CRM system (SugarCRM).</li></ul>',
         technologies: ['Python', 'PHP', 'SNMP', 'SSH'],
-        status: 'released'
+        status: 'terminated'
       },
       {
         header: 'Drupal hidden.module',
