@@ -9,10 +9,11 @@ block extrahead
 block content
   h2 Spacebears
 
-  #gamezone
+  #gamezone.row
     // _must_ specify width + height in canvas tag to have bears in right size
-    canvas.span4(id="board", width="550", height="413")
-    #panel.span3.box
+    .col-xs-6
+      canvas(id="board", width="550", height="413")
+    #panel.col-xs-4.box
       h3 Catch the Space Bears!
 
       #intro
@@ -26,32 +27,32 @@ block content
 
       #scoreboard
         h4 Scoreboard
-        .row-fluid
-          .span2 Miss:
-          .span2
+        .row
+          .col-xs-2 Miss:
+          .col-xs-2
             span(id="miss") 0
-          .span2 Score:
-          .span2
+          .col-xs-2 Score:
+          .col-cs-2
             span(id="score") 0
-          .span2 Elapsed:
-          .span2
+          .col-xs-2 Elapsed:
+          .col-xs-2
             span(id="elapsed") 0
             |  s
 
       #actions
         h4 Actions
-        button.btn(id="startpause") Start
-        button.btn(id="reset") Reset
+        button.btn.btn-default(id="startpause") Start
+        button.btn.btn-default(id="reset") Reset
 
       #settings
         form.form-inline
           h4 Settings
           label Win Score
-            input(id="settings-winscore", type="range", min="1", max="99", value="10")
+            input.form-control(id="settings-winscore", type="range", min="1", max="99", value="10")
           label Speed
-            input(id="settings-speed", type="range", min="1", max="9", value="1")
+            input.form-control(id="settings-speed", type="range", min="1", max="9", value="1")
           label Bears
-            input(id="settings-bears", type="range", min="1", max="5", value="4")
+            input.form-control(id="settings-bears", type="range", min="1", max="5", value="4")
 
     #finish-modal.modal.hide.fade(tabindex="-1", role="dialog", aria-hidden="true")
       .modal-header

@@ -76,11 +76,11 @@ var Kartuliflash = {
 
   init: function() {
     $('#showtable').click(function(){
-        if ($('#sidebar').is(':visible')) {
-            $('#sidebar').hide();
+        if ($('.sidebar').is(':visible')) {
+            $('.sidebar').hide();
             $('#showtable').html('Show  Table');
         } else {
-            $('#sidebar').show();
+            $('.sidebar').show();
             $('#showtable').html('Hide  Table');
         }
         return false;
@@ -143,7 +143,7 @@ var Kartuliflash = {
         Kartuliflash.modifier = event.which;
     });
 
-    $('#sidebar').hide();
+    $('.sidebar').hide();
     $('#new').click();
 
     Kartuliflash.populateLetterTable();

@@ -7,37 +7,52 @@ block extrahead
 
 
 block content
-  .row-fluid
-    .span12
+  .row
+    .col-xs-12
       h2 Georgian Letter Flashcards
-      p Type in the english equivalent to the georgian character displayed  Hit 'Check' or press &lt;Enter&gt; to see if you were right. Hit 'New Card' or press &lt;Alt-n&gt; to deal a new card.
-      p Reveal the full character table by hitting 'Show Table'.
+      p Type in the english equivalent to the georgian character displayed  Hit&nbsp;
+        span.btn.btn-primary Check
+        &nbsp; or press
+        kbd Enter
+        &nbsp; to see if you were right. Hit&nbsp;
+        span.btn.btn-default New Card
+        &nbsp; or press 
+        kbg Alt-n
+        &nbsp; to deal a new card.
+      p Reveal the full character table by hitting&nbsp;
+        span.btn.btn-default Show Table
+        &nbsp;.
 
-  .row-fluid
-    #main.span6
+  .row
+    .content.col-xs-4
       form.form-horizontal
         #flashcard.box
-          .control-group
-            label.control-label Georgian
-            .controls.readonly
+          .row
+            .col-xs-2
+              label Georgian
+            .col-xs-10
               span(id="georgian")
-          .control-group
-            label.control-label English
-            .controls
-              input(type="text", id="solution", size="3", maxlength="3")
-              button.btn(id="check") Check
+          .row
+            .col-xs-2
+              label English
+            .col-xs-2
+              input.form-control(type="text", id="solution", size="3", maxlength="3")
+            .col-xs-8
+              button.btn.btn-primary(id="check") Check
               strong
                 span(id="english")
-          .control-group
-            .controls
-                button.btn(id="new") New Card (Alt+n)
-                button.btn(id="showtable") Show Table
 
-          #scoreboard.control-group
-            label.control-label Score
-            .controls.readonly
+          .row
+            .col-xs-12
+              button.btn.btn-default(id="new") New Card (Alt+n)
+              button.btn.btn-default(id="showtable") Show Table
+
+          #scoreboard.row
+            .col-xs-2
+              label Score
+            .col-xs-10
               span(id="score") 0 / 0
 
-    #sidebar.box.span6
+    .sidebar.box.col-xs-8
       table.table.table-striped.table-bordered(id="letter-table")
         caption Letter Table

@@ -6,50 +6,51 @@ block extrahead
     script(src="/js/portfolio.js")
 
 block content
-  #main.span9
-    h2 Portfolio
+  .row
+    .content.col-xs-9
+      h2 Portfolio
 
-    #intro.
-      Have a look at my IT-related doings here and check github for my main project repository:
-    p
-      a(title="kodeaffe @ github",href="http://github.com/marmorkuchen") http://github.com/marmorkuchen
+      #intro.
+        Have a look at my IT-related doings here and check github for my main project repository:
+      p
+        a(title="kodeaffe @ github",href="http://github.com/marmorkuchen") http://github.com/marmorkuchen
 
-    #portfolio
-      - for (var i in portfolio)
-        div(id="year-#{portfolio[i].year}", class="row-fluid year")
-          h3
-            a.toggle= portfolio[i].year
-              i.arrow.icon-arrow-right.icon-white
-          .items
-            - for item in portfolio[i].items
-              .box
-                .row-fluid
-                  .span12
-                    - var header = item['header']
-                    - if ('start' in item && 'end' in item)
-                      - header += ' (' + item['start'] + ' - ' + item['end'] + ')'
-                    - else if ('start' in item)
-                      - header += ' (' + item['start'] + ')'
-                    - else if ('end' in item)
-                      - header += ' (- ' + item['end'] + ')'
-                    h4= header
+      #portfolio
+        - for (var i in portfolio)
+          div(id="year-#{portfolio[i].year}", class="row-fluid year")
+            h3
+              a.toggle= portfolio[i].year
+                i.arrow.icon-arrow-right.icon-white
+            .items
+              - for item in portfolio[i].items
+                .box
+                  .row
+                    .col-xs-12
+                      - var header = item['header']
+                      - if ('start' in item && 'end' in item)
+                        - header += ' (' + item['start'] + ' - ' + item['end'] + ')'
+                      - else if ('start' in item)
+                        - header += ' (' + item['start'] + ')'
+                      - else if ('end' in item)
+                        - header += ' (- ' + item['end'] + ')'
+                      h4= header
 
-                .row-fluid
-                  .span1
-                    a(href="#{item['link_href']}") #{item['link_text']}
-                  .span11!= item['description']
+                  .row
+                    .col-xs-1
+                      a(href="#{item['link_href']}") #{item['link_text']}
+                    .col-xs-11!= item['description']
 
-                .row-fluid
-                  .span1 tools
-                  .span11= item['technologies'].join(', ')
+                  .row
+                    .col-xs-1 tools
+                    .col-xs-11= item['technologies'].join(', ')
 
-                .row-fluid 
-                  .span1 status
-                  .span11= item['status']
+                  .row
+                    .col-xs-1 status
+                    .col-xs-11= item['status']
 
-  #sidebar-right.span3
-    #technologies.box
-      h3 Technologies
-      ul
-        - for (var i in technologies)
-          li(id="#{technologies[i]}") #{technologies[i]}
+    .sidebar.col-xs-3
+      #technologies.box
+        h3 Technologies
+        ul
+          - for (var i in technologies)
+            li(id="#{technologies[i]}") #{technologies[i]}
