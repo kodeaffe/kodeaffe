@@ -61,7 +61,7 @@ var Kartuliflash = {
 
 
   populateLetterTable: function() {
-    var table = $('#letter-table');
+    var table = $('#letter-table table');
     var letters_length = Kartuliflash.letters.length;
     var num_sets = 3;
     for (var i = 0; i < letters_length; i += num_sets) {
@@ -76,11 +76,11 @@ var Kartuliflash = {
 
   init: function() {
     $('#showtable').click(function(){
-        if ($('.sidebar').is(':visible')) {
-            $('.sidebar').hide();
+        if ($('#letter-table').is(':visible')) {
+            $('#letter-table').hide();
             $('#showtable').html('Show  Table');
         } else {
-            $('.sidebar').show();
+            $('#letter-table').show();
             $('#showtable').html('Hide  Table');
         }
         return false;
@@ -90,48 +90,45 @@ var Kartuliflash = {
         var idx = Math.round(Math.random() * (Kartuliflash.letters.length - 1));
         Kartuliflash.current = Kartuliflash.letters[idx];
 
-        $('#solution').removeAttr('disabled');
-        $('#solution').val('');
-        $('#solution').focus();
+        $('#guess').removeAttr('disabled');
+        $('#guess').val('');
+        $('#guess').focus();
         $('#georgian').html(Kartuliflash.current[0]);
-        $('#english').hide();
-        $('#english').html(Kartuliflash.current[1] + ' ' + Kartuliflash.current[2]);
-        $('#english').removeClass('text-success').removeClass('text-error');
-        $('#english').parent().parent().removeClass('success').removeClass('error');
+        $('#solution').hide();
+        $('#solution').html(Kartuliflash.current[1] + ' ' + Kartuliflash.current[2]);
+        $('#solution').removeClass('alert alert-success').removeClass('alert alert-danger');
         $('#check').show();
         return false;
     });
 
     $('#check').click(function(){
-        var solution = $('#solution').val();
-        if (!solution) return false;
+        var guess = $('#guess').val();
+        if (!guess) return false;
 
         var correct = false;
-        if (solution == Kartuliflash.current[1]) {
+        if (guess == Kartuliflash.current[1]) {
             correct = true;
         } else {
             var vw = Kartuliflash.current[1].split('/');
             if (vw.length == 2) {
-                if (solution == vw[0] || solution == vw[1]) {
+                if (guess == vw[0] || guess == vw[1]) {
                     correct = true;
                 }
             }
         }
 
         if (correct) {
-           $('#english').addClass('text-success');
-           $('#english').parent().parent().addClass('success');
+           $('#solution').addClass('alert alert-success');
            Kartuliflash.score.correct += 1;
         } else {
-           $('#english').addClass('text-error');
-           $('#english').parent().parent().addClass('error');
+           $('#solution').addClass('alert alert-danger');
         }
         Kartuliflash.score.total += 1;
         $('#score').html(Kartuliflash.score.correct + ' / ' + Kartuliflash.score.total);
 
-        $('#english').show();
+        $('#solution').show();
         $('#check').hide();
-        $('#solution').attr('disabled', true);
+        $('#guess').attr('disabled', true);
         $('#new').focus();
         return false;
     });
@@ -143,7 +140,7 @@ var Kartuliflash = {
         Kartuliflash.modifier = event.which;
     });
 
-    $('.sidebar').hide();
+    $('#letter-table').hide();
     $('#new').click();
 
     Kartuliflash.populateLetterTable();

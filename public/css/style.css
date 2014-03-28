@@ -94,3 +94,7 @@ div, p {
 #flashcard .row {
   margin: 10px 0;
 }
+
+#flashcard #guessrow {
+  height: 65px;
+}
