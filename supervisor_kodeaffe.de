@@ -1,0 +1,7 @@
+[program:kodeaffe.de]
+command = /home/kodeaffe/kodeaffe.de/target/release/kodeaffe_de
+user = kodeaffe
+directory = /home/kodeaffe/kodeaffe.de
+autostart= true
+autorestart= true
+startretries=3

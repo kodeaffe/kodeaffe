@@ -1,0 +1,27 @@
+[package]
+name = "kodeaffe_de"
+version = "0.2.0"
+authors = ["kodeaffe <webmaster@kodeaffe.de>"]
+description =  "Website for kodeaffe.de"
+homepage = "https://kodeaffe.de"
+repository = "https://github.com/kodeaffe/kodeaffe"
+readme = "README.rst"
+keywords = ["kodeaffe", "website"]
+license = "GPL-3.0"
+# never publish this to crates.io :)
+publish = false
+
+[dependencies]
+iron = "0.5.*"
+staticfile = "0.4.*"
+mount = "0.3.*"
+handlebars-iron = "0.24.*"
+env_logger = "0.4.*"
+router = "0.5.*"
+rust-ini = "0.10.*"
+serde = "^1.0.0"
+serde_json = "^1.0.0"
+
+[features]
+## create a feature in your app
+watch = ["handlebars-iron/watch"]

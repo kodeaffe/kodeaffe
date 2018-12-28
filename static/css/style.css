@@ -1,0 +1,221 @@
+html, body {
+  color: #ef6;
+  background-color: #650;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana;
+}
+
+h1, h2, h3, h4 {
+	color: #ef6;
+}
+
+footer {
+  color: #9d9d9d;
+  font-size: x-small;
+}
+
+a {
+	color: #eee;
+}
+a:hover,
+a:focus,
+a:active {
+	color: #eee;
+}
+
+.navbar-left img {
+	height: 80px;
+	margin-right: 10px;
+}
+
+.navbar-brand a {
+	font-size: xx-large;
+	color: #ef6;
+}
+
+.navbar-inverse {
+	background-color: #883;
+	border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	height: 80px;
+	color: #650;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+	color: #ef6 !important;
+	background-color: #650;
+}
+
+.navbar-inverse .navbar-nav > li > a:visited {
+	color: #650;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover {
+	color: #ef6;
+}
+
+
+.main {
+	background-color: #883;
+	border-radius: 6px;
+	padding: 20px;
+	margin-top: 10px;
+}
+.main h2 {
+	margin-top: 0;
+}
+
+
+.sidebar {
+	border: 1px solid black;
+	padding: 10px;
+	border-radius: 6px;
+	margin-top: 10px;
+}
+.sidebar h2 {
+	margin-top: 0;
+}
+.sidebar ul {
+	padding-left: 20px;
+}
+
+.modal-header {
+	background-color: #650;
+	border-bottom: none;
+}
+.modal-header button {
+	color: #ef6;
+}
+.modal-body {
+	background-color: #883;
+}
+.modal-footer {
+	border: none;
+	background-color: #650;
+}
+
+.table-striped tbody > tr:nth-child(2n+1) > td,
+.table-striped tbody > tr:nth-child(2n+1) > th {
+    background-color: #650;
+}
+
+
+#index,
+#portfolio,
+#kartuliflash,
+#spacebears
+{
+	margin-top: 80px;
+}
+
+
+#kartuliflash #flashcard .row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}	
+#kartuliflash #georgian {
+	font-size: x-large;
+}
+
+#kartuliflash #english {
+	font-size: larger;
+}
+
+#kartuliflash #guess {
+	width: 50%;
+	display: inline;
+}	
+
+#kartuliflash #check {
+	margin-top: -5px;
+}
+
+#kartuliflash #score {
+	font-size: x-large;
+}
+
+
+#kartuliflash #letter-table {
+	margin-top: 10px;
+}
+
+
+
+
+
+#spacebears canvas {
+  width: 550px !important;
+  height: 413px !important;
+  background:url(/static/img/spacebears/background.jpg);
+  margin-top: 10px;
+}
+
+
+#spacebears #intro,
+#spacebears #scoreboard,
+#spacebears #actions,
+#spacebears #settings {
+  margin: 10px 0;
+}
+
+
+#spacebears #intro #fastest {
+  font-size: larger;
+  color: #11d;
+}
+
+#spacebears #panel > div {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#spacebears #scoreboard #score {
+  font-size: xx-large;
+}
+
+#spacebears #scoreboard #miss {
+  font-size: xx-large;
+}
+
+#spacebears #scoreboard #elapsed {
+  font-size: larger;
+}
+
+
+#spacebears #actions button {
+  width: 100px;
+}
+
+#spacebears #settings input {
+	color: #ef6;
+	background-color: #650;
+	width: 70px;
+	margin: 0 3px;
+}
+
+
+
+#portfolio #intro {
+	margin-bottom: 20px;
+}
+
+
+#portfolio button {
+	margin: 5px 0;
+}
+#portfolio .year {
+	margin-bottom: 50px;
+}
+
+#portfolio .item {
+	margin: 30px 0;
+	border-top: 1px solid white;
+}
+

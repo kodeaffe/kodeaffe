@@ -1,0 +1,16 @@
+[Unit]
+Description=Website of kodeaffe.de
+After=apache2.service
+Requires=apache2.service
+
+[Service]
+Type=simple
+User=kodeaffe
+Group=kodeaffe
+SyslogIdentifier=kodeaffe_de
+Restart=on-failure
+WorkingDirectory=/home/kwensch/htdocs/kodeaffe.de
+ExecStart=/home/kodeaffe/target/release/kodeaffe_de
+
+[Install]
+WantedBy=multi-user.target
